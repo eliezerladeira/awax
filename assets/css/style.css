@@ -1,0 +1,71 @@
+/* RESET */
+* {
+    margin: 0;   /* espaçamento externo do objeto */
+    padding:0;   /* espaçamento interno do objeto */
+    box-sizing: border-box;   /* indica que o tamanho levará em conta até a borda, ou seja, o width será a soma do conteúdo com a borda e o padding */
+}
+
+/* GENERAL */
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+/* HEADER */
+header {
+    height: 100px;   /* altura */
+    background-color: #000000;   /* cor de fundo */
+    color: #FFFFFF;   /* cor do texto */
+}
+
+.header {
+    max-width: 1140px;   /* largura máxima */
+    height: 100px;   /* altura */
+    margin: auto;
+    display: flex;   /* define a propriedade display do container com o valor flex para que as demais propriedades apresentem o resultado esperado */
+    align-items: center;   /* centraliza todos os itens verticalmente */
+}
+
+.logo {
+    width: 100px;   /* largura */
+}
+
+.logoimg {
+    width: 80px;   /* largura */
+    height: 80px;   /* altura */
+    background-color: #B28756;   /* cor de fundo */
+}
+
+/* HEADER / MENU */
+.menu {
+    flex: 1;   /* pega todo o restante do espaço disponível */
+    display: flex;
+    justify-content: flex-end;   /* alinha os itens a partir do fim do eixo principal */
+}
+
+.menu ul,
+.menu li {
+    list-style: none;   /* remove o estilo da lista, no caso, as bolinhas */
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu li a {
+    color: #FFFFFF;
+    text-transform: uppercase;   /* passa as letras para maiúsculas */
+    font-weight: 600;   /* fonte em seminegrito */
+    text-decoration: none;   /* remove o sublinhado dos links */
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100px;
+    display: flex;   /* (padrão é inline) altera para colocar altura */ /* neste caso se faz necessário para que se possa aumentar a altura do menu para colocar a borda na parte debaixo do menu */
+    align-items: center;
+    border-bottom: 5px solid #000000;
+}
+
+.menu li a:hover,
+.menu .active a {
+    border-bottom: 5px solid #B28756;
+}
