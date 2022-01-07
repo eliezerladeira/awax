@@ -1,3 +1,6 @@
+/*
+******************* CSS DE INTERFACE *******************
+*/
 /* RESET */
 * {
     margin: 0;   /* espaçamento externo do objeto */
@@ -79,6 +82,19 @@ header {
 }
 
 /* MAIN / BANNER / SLIDES */
+.button {
+    display: inline-block;
+    background-color: #B28756;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
 .banner {
     height: calc(100vh - 100px);   /* (vh) tamanho total do monitor que estiver exibindo a página */ /* subtraindo o tamanho do menu para não dar barra vertical */
     background-color: #333;   /* fundo padrão para o caso da imagem não aparecer */
@@ -124,18 +140,6 @@ header {
     margin-top: 20px;
 }
 
-.banner a {
-    display: block;
-    background-color: #B28756;
-    color: #FFF;
-    text-transform: uppercase;
-    font-size: 11px;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 10px 30px;
-    margin-top: 30px;
-    border-radius: 20px;
-}
 
 .banner .sliders-pointers {
     width: 100vw;
@@ -196,7 +200,8 @@ header {
     background-color: #F7F7F7;
 }
 
-.default.light .section-title {
+.default.light .section-title,
+.default.light .section-body {
     color: #000;
 }
 
@@ -204,6 +209,62 @@ header {
     background-color: #000;
 }
 
-.default.dark .section-title {
+.default.dark .section-title,
+.default.dark .section-body {
     color: #FFF;
+}
+
+/*
+******************* CSS DE ÁREAS ESPECÍFICAS *******************
+*/
+/* SECTION ABOUT US */
+.section-aboutus {
+    display: flex;
+}
+
+.section-aboutus--left {
+    flex: 1;
+}
+
+.section-aboutus--left {
+    font-size: 14px;
+    line-height: 25px;   /* espaçamento entre linhas */
+}
+
+.section-aboutus--right {
+    width: 520px;
+    text-align: center;
+}
+
+.section-aboutus--right img {
+    width: 480px;
+    box-shadow: 0px 5px 10px #333;   /* sombra */
+}
+
+/* SECTION SERVICES */
+.section-services {
+    display: flex;
+}
+
+.section-service {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+    padding: 15px;
+}
+
+.section-service:first-child {
+    border-left: 1px solid #333;   /* aplica borda somente no primeiro elemento */
+}
+
+.section-service h4 {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.section-service p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999;
 }
